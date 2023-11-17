@@ -1,4 +1,9 @@
-img{
+.img_carrito {
     height: 15px;
+    width: 15px;
     color: white;
+}
+
+img{
+    width: 150px;
 }
