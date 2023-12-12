@@ -1,11 +1,15 @@
-import React from 'react'
-import { Badge } from '@chakra-ui/react'
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
+import { CartContext } from '../context/CartContext'
 
 const CartWidget = () => {
+
+  const { cantidadCarrito } = useContext(CartContext)
+
   return (
-    <div>
-        <img className="img_carrito" src="../src/assets/shop-svgrepo-com.svg"/>
-        <Badge colorScheme='blue'>3</Badge>
+    <div className='carrito'>
+      <Link to="/cart"><img className="icono-carrito" src="..\src\assets\icons8-bag-50.png" alt="carrito"/></Link>
+      <span className='numero-icono-carrito'>{cantidadCarrito()}</span>
     </div>
   )
 }

@@ -1,49 +1,42 @@
-import React from 'react'
 import ItemCount from './ItemCount'
-import { useParams } from 'react-router-dom'
-import { Card, CardBody,Image, Stack, Heading, Text, Divider, CardFooter } from '@chakra-ui/react'
+import { aMayus } from '../helpers/aMayus'
+import { useState, useContext } from 'react'
+import { CartContext } from '../context/CartContext'
 
-const ItemDetail = ({productos}) => {
+const ItemDetail = ({ item }) => {
 
-  const {id} = useParams()
 
-  const productosFiltrados = productos.filter ((producto) => producto.id == id)
-  
+  const { agregarCarrito } = useContext(CartContext);
+
+  const [cantidad, setCantidad] = useState(1);
+
+  const sumarCarrito = () => {
+    cantidad < item.stock && setCantidad(cantidad + 1)
+  }
+
+  const restarCarrito = () => {
+    cantidad > 1 && setCantidad(cantidad - 1)
+  }
+
   return (
-    <div>
-        { productosFiltrados.map((p)=>{
-        return(
-        <div key={p.id}>
-
-<Card align='center' maxW='sm'>
-  <CardBody>
-    <Image
-      src={p.img}
-      borderRadius='lg'
-    />
-    <Stack mt='6' spacing='3'>
-      <Heading size='md'>{p.name}</Heading>
-      <Text>
-      {p.description}
-      </Text>
-      <Text color='blue.600' fontSize='2xl'>
-      ${p.price}
-      </Text>
-    </Stack>
-  </CardBody>
-  <Divider />
-  <CardFooter>
-  <ItemCount />
-  </CardFooter>
-</Card> 
-        </div> 
-        )
-
-    })
-    }
+    <div className='container'>
+        <h1 className='main-title'>Descripción</h1>
+        <div className='producto-detalle'>
+        <img src={item.img} />
+        <div>
+          <h3 className='titulo'> {item.nombre} </h3>
+          <p className='descripcion'> {item.descripcion} </p>
+          <p className='categoria'> {aMayus(item.categoria)} </p>
+          <p className='precio'> ${item.precio} </p>
+          <ItemCount
+            cantidad={cantidad}
+            sumarCarrito={sumarCarrito}
+            restarCarrito={restarCarrito}
+            agregarCarrito={() => { agregarCarrito(item, cantidad) }} />
+        </div>
+      </div>
     </div>
   )
 }
 
 export default ItemDetail
-

@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "nombre": "Zapatillas",
+        "precio": 125,
+        "img": "../src/assets/img/ejemplo1.jpeg",
+        "descripcion": "descripcion producto A",
+        "categoria": "calzado",
+        "stock": 10
+},
+{
+    "id": 2,
+    "nombre": "Mochila",
+    "precio": 50,
+    "img": "../src/assets/img/ejemplo2.jpeg",
+    "descripcion": "descripcion producto B",
+    "categoria": "accesorios",
+    "stock": 10
+},
+{
+    "id": 3,
+    "nombre": "Calleras",
+    "precio": 10,
+    "img": "../src/assets/img/ejemplo3.jpeg",
+    "descripcion": "descripcion producto C",
+    "categoria": "accesorios",
+    "stock": 10
+},
+{
+    "id": 4,
+    "nombre": "Rodilleras",
+    "precio": 40,
+    "img": "../src/assets/img/ejemplo4.jpg",
+    "descripcion": "descripcion producto D",
+    "categoria": "accesorios",
+    "stock": 10
+},
+{
+    "id": 5,
+    "nombre": "Cinturón",
+    "precio": 25,
+    "img": "../src/assets/img/ejemplo5.jpeg",
+    "descripcion": "descripcion producto E",
+    "categoria": "accesorios",
+    "stock": 10
+},
+{
+    "id": 6,
+    "nombre": "Remera",
+    "precio": 20,
+    "img": "../src/assets/img/ejemplo6.jpeg",
+    "descripcion": "descripcion producto F",
+    "categoria": "indumentaria",
+    "stock": 10
+},
+{
+    "id": 7,
+    "nombre": "Short",
+    "precio": 20,
+    "img": "../src/assets/img/ejemplo7.jpeg",
+    "descripcion": "descripcion producto F",
+    "categoria": "indumentaria",
+    "stock": 10
+},
+{
+    "id": 8,
+    "nombre": "Soga",
+    "precio": 10,
+    "img": "../src/assets/img/ejemplo8.jpg",
+    "descripcion": "descripcion producto G",
+    "categoria": "accesorios",
+    "stock": 10
+},
+{
+    "id": 9,
+    "nombre": "Muñequeras",
+    "precio": 5,
+    "img": "../src/assets/img/ejemplo9.jpg",
+    "descripcion": "descripcion producto H",
+    "categoria": "accesorios",
+    "stock": 10
+},
+{
+    "id": 10,
+    "nombre": "Medias",
+    "precio": 5,
+    "img": "../src/assets/img/ejemplo10.jpeg",
+    "descripcion": "descripcion producto I",
+    "categoria": "indumentaria",
+    "stock": 10
+}
+]
